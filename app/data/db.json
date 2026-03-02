@@ -1,0 +1,124 @@
+{
+  "posts": [
+    {
+      "id": 1,
+      "title": "Getting Started with React",
+      "datetime": "2026-02-15T10:30:00Z",
+      "body": "React is a powerful JavaScript library for building user interfaces. In this post, we'll explore the basics of components, props, and state management."
+    },
+    {
+      "id": 2,
+      "title": "Understanding TypeScript Benefits",
+      "datetime": "2026-02-16T14:20:00Z",
+      "body": "TypeScript adds static typing to JavaScript, making your code more robust and maintainable. Learn why so many developers are making the switch."
+    },
+    {
+      "id": 3,
+      "title": "Next.js App Router Guide",
+      "datetime": "2026-02-17T09:15:00Z",
+      "body": "The new App Router in Next.js 13+ brings powerful features like server components, streaming, and improved data fetching patterns."
+    },
+    {
+      "id": 4,
+      "title": "CSS Grid vs Flexbox",
+      "datetime": "2026-02-18T11:45:00Z",
+      "body": "Both CSS Grid and Flexbox are powerful layout tools. Understanding when to use each one will help you create better responsive designs."
+    },
+    {
+      "id": 5,
+      "title": "API Design Best Practices",
+      "datetime": "2026-02-19T16:00:00Z",
+      "body": "Creating a well-designed API is crucial for modern applications. This post covers REST principles, versioning, and error handling strategies."
+    },
+    {
+      "id": 6,
+      "title": "JavaScript Async/Await Explained",
+      "datetime": "2026-02-20T08:30:00Z",
+      "body": "Asynchronous programming in JavaScript can be tricky. Learn how async/await makes working with promises much more intuitive and readable."
+    },
+    {
+      "id": 7,
+      "title": "Building Scalable Node.js Applications",
+      "datetime": "2026-02-21T13:15:00Z",
+      "body": "Node.js is perfect for building scalable server-side applications. Discover patterns and practices for handling high traffic and complex workflows."
+    },
+    {
+      "id": 8,
+      "title": "Introduction to GraphQL",
+      "datetime": "2026-02-22T10:00:00Z",
+      "body": "GraphQL offers a more flexible alternative to REST APIs. Learn about queries, mutations, and why GraphQL might be right for your project."
+    },
+    {
+      "id": 9,
+      "title": "React Hooks Deep Dive",
+      "datetime": "2026-02-23T15:30:00Z",
+      "body": "Hooks transformed how we write React components. This comprehensive guide covers useState, useEffect, useContext, and custom hooks."
+    },
+    {
+      "id": 10,
+      "title": "Web Performance Optimization",
+      "datetime": "2026-02-24T09:45:00Z",
+      "body": "Fast websites provide better user experiences and rank higher in search results. Learn key strategies for optimizing your web application's performance."
+    },
+    {
+      "id": 11,
+      "title": "Docker for Developers",
+      "datetime": "2026-02-25T12:00:00Z",
+      "body": "Docker containers simplify development and deployment workflows. Get started with containerizing your applications and understanding Docker basics."
+    },
+    {
+      "id": 12,
+      "title": "State Management with Zustand",
+      "datetime": "2026-02-26T14:30:00Z",
+      "body": "Zustand is a lightweight state management solution for React. Learn why it's becoming a popular alternative to Redux and Context API."
+    },
+    {
+      "id": 13,
+      "title": "Testing React Components",
+      "datetime": "2026-02-27T11:15:00Z",
+      "body": "Testing is essential for maintaining quality code. Explore React Testing Library and best practices for writing reliable component tests."
+    },
+    {
+      "id": 14,
+      "title": "Tailwind CSS Production Tips",
+      "datetime": "2026-02-28T10:20:00Z",
+      "body": "Tailwind CSS speeds up styling workflow with utility classes. Learn optimization techniques and best practices for production applications."
+    },
+    {
+      "id": 15,
+      "title": "MongoDB Schema Design",
+      "datetime": "2026-03-01T08:00:00Z",
+      "body": "Effective MongoDB schema design impacts application performance and scalability. Understand embedding vs referencing and indexing strategies."
+    },
+    {
+      "id": 16,
+      "title": "Authentication with JWT",
+      "datetime": "2026-02-14T16:45:00Z",
+      "body": "JSON Web Tokens provide a secure way to handle authentication in modern applications. Learn implementation details and security considerations."
+    },
+    {
+      "id": 17,
+      "title": "Git Workflow Strategies",
+      "datetime": "2026-02-13T13:30:00Z",
+      "body": "Choosing the right Git workflow is important for team collaboration. Compare feature branches, git-flow, and trunk-based development approaches."
+    },
+    {
+      "id": 18,
+      "title": "Responsive Design Principles",
+      "datetime": "2026-02-12T09:00:00Z",
+      "body": "Creating websites that work on all devices requires thoughtful design. Master media queries, mobile-first approach, and fluid layouts."
+    },
+    {
+      "id": 19,
+      "title": "WebSocket Real-time Communication",
+      "datetime": "2026-02-11T15:15:00Z",
+      "body": "WebSockets enable real-time bidirectional communication between client and server. Perfect for chat apps, live updates, and collaborative tools."
+    },
+    {
+      "id": 20,
+      "title": "SEO for Single Page Applications",
+      "datetime": "2026-02-10T11:30:00Z",
+      "body": "SEO can be challenging for SPAs. Learn about server-side rendering, static generation, and meta tag management for better search visibility."
+    }
+  ]
+}
