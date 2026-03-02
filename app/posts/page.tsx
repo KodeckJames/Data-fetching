@@ -43,11 +43,12 @@ export default function Posts() {
         posts.map((post) => (
           <div
             key={post.id}
-            className=" flex flex-col text-center justify-center items-center min-h-dvh gap-2"
+            className=" flex flex-col text-center justify-center items-center gap-2"
           >
             <h1 className=" font-bold text-2xl">{post.title}</h1>
             <p className=" font-light italic text-lg">{post.datetime}</p>
-            <p className=" font-semibold text-xl">{post.body}</p>
+                <p className=" font-semibold text-xl text-green-500">{post.body}</p>
+                <hr className='w-full border-t-2 border-white my-4' />
           </div>
         ))
       )}
