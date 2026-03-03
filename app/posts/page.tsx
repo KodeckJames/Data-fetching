@@ -33,8 +33,28 @@ export default function Posts() {
     FetchPosts()
   }, [])
 
+  const handleDelete = async (id: number) => {
+    try {
+      await baseAPI.delete(`/posts/${id}`)
+      setPosts(posts.filter((post) => post.id !== id))
+    } catch (error) {
+      if (axios.isAxiosError(error)) {
+        console.log(error.response?.data)
+        console.log(error.response?.status)
+        console.log(error.response?.headers)
+      } else {
+        if (error instanceof Error) {
+          console.log(`Error: ${error.message}`)
+        }
+      }
+    }
+  }
+
   return (
     <div className=" min-h-dvh px-2">
+      <h1 className=" text-4xl font-bold text-center py-2 underline decoration-green-500 decoration-wavy ">
+        POSTS
+      </h1>
       {posts.length === 0 ? (
         <div className=" flex min-h-dvh justify-center items-center">
           Loading...
@@ -47,8 +67,14 @@ export default function Posts() {
           >
             <h1 className=" font-bold text-2xl">{post.title}</h1>
             <p className=" font-light italic text-lg">{post.datetime}</p>
-                <p className=" font-semibold text-xl text-green-500">{post.body}</p>
-                <hr className='w-full border-t-2 border-white my-4' />
+            <p className=" font-semibold text-xl text-green-500">{post.body}</p>
+            <button
+              onClick={() => handleDelete(post.id)}
+              className="px-4 py-2 bg-red-500 text-white rounded hover:bg-red-600 transition-colors"
+            >
+              Delete Post
+            </button>
+            <hr className="w-full border-t-2 border-white my-4" />
           </div>
         ))
       )}

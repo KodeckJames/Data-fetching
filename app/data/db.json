@@ -119,12 +119,6 @@
       "title": "SEO for Single Page Applications",
       "datetime": "2026-02-10T11:30:00Z",
       "body": "SEO can be challenging for SPAs. Learn about server-side rendering, static generation, and meta tag management for better search visibility."
-    },
-    {
-      "id": "1e4d",
-      "title": "Test Title",
-      "datetime": "2026-03-02T09:36",
-      "body": "Test Content"
     }
   ],
   "$schema": "./node_modules/json-server/schema.json"
