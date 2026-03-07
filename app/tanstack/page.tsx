@@ -41,8 +41,11 @@ export default function TanStackPage() {
         return (
           <div key={crypto.id} className=" gap-10 justify-center  flex flex-1 ">
             <p>
-              {crypto.name} - {crypto.symbol}- $
-              {crypto.current_price.toLocaleString()}
+              {crypto.name} - {crypto.symbol} -
+              {crypto.current_price.toLocaleString('en-KE', {
+                style: 'currency',
+                currency: 'KES',
+              })}
             </p>
           </div>
         )
