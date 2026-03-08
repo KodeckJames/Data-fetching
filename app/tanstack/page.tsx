@@ -32,6 +32,7 @@ export default function TanStackPage() {
   const { data, isPending, isError, error } = useQuery({
     queryKey: ['cryptoData'],
     queryFn: fetchCryptoData,
+    gcTime: 5000
   })
   if (isPending) return <div>Data Pending...</div>
   if (isError) return <div>{error.message}</div>
