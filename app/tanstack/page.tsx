@@ -1,6 +1,6 @@
 'use client'
-import axios from 'axios'
 import { useQuery } from '@tanstack/react-query'
+import axios from 'axios'
 
 interface CryptoData {
   id: string
@@ -29,18 +29,29 @@ const fetchCryptoData = async (): Promise<CryptoData[]> => {
 }
 
 export default function TanStackPage() {
-  const { data, isPending, isError, error } = useQuery({
+  const { data, isPending, isError, error, refetch, isFetching } = useQuery({
     queryKey: ['cryptoData'],
     queryFn: fetchCryptoData,
     gcTime: 5000,
     staleTime: 0,
     // refetchInterval: 1000,
     // refetchIntervalInBackground: true
+    enabled: false,
   })
-  if (isPending) return <div>Data Pending...</div>
-  if (isError) return <div>{error.message}</div>
+  
   return (
-    <div>
+    <div className=" ">
+      <div className=" flex justify-center py-4">
+        <button
+          className=" visible bg-blue-500 px-4 py-2 cursor-pointer rounded-xl text-white"
+          title="Enable Data"
+          onClick={() => refetch()}
+        >
+          Enable Data
+        </button>
+      </div>
+      {isPending || isFetching && <div>Data Pending...</div>}
+      {isError && <div>{(error as Error)?.message || 'An error occurred'}</div>}
       {data?.map((crypto: CryptoData) => {
         return (
           <div key={crypto.id} className=" gap-10 justify-center  flex flex-1 ">
