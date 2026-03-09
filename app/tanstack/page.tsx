@@ -1,7 +1,8 @@
 'use client'
+import { useToast } from '@/components/ui/toast'
 import { useQuery } from '@tanstack/react-query'
 import axios from 'axios'
-
+import { useCallback, useEffect } from 'react'
 interface CryptoData {
   id: string
   name: string
@@ -29,16 +30,45 @@ const fetchCryptoData = async (): Promise<CryptoData[]> => {
 }
 
 export default function TanStackPage() {
-  const { data, isPending, isError, error, refetch, isFetching } = useQuery({
-    queryKey: ['cryptoData'],
-    queryFn: fetchCryptoData,
-    gcTime: 5000,
-    staleTime: 0,
-    // refetchInterval: 1000,
-    // refetchIntervalInBackground: true
-    enabled: false,
-  })
-  
+  const { toast } = useToast()
+  const onSuccess = useCallback(() => {
+    toast({
+      title: 'Fetch Successful',
+      description: 'Crypto data fetched Successfully',
+      variant: 'success',
+    })
+  }, [toast])
+  const onError = useCallback(() => {
+    toast({
+      title: 'Error Fetching Crypto Data',
+      description: 'Crypto data fetching Failed',
+      variant: 'destructive',
+    })
+  }, [toast])
+
+  const { data, isPending, isError, error, refetch, isFetching, isSuccess } =
+    useQuery({
+      queryKey: ['cryptoData'],
+      queryFn: fetchCryptoData,
+      gcTime: 5000,
+      staleTime: 0,
+      // refetchInterval: 1000,
+      // refetchIntervalInBackground: true
+      enabled: false,
+    })
+
+  useEffect(() => {
+    if (isError && error) {
+      onError()
+    }
+  }, [isError, error, onError])
+
+  useEffect(() => {
+    if (isSuccess && data) {
+      onSuccess()
+    }
+  }, [onSuccess, data, isSuccess])
+
   return (
     <div className=" ">
       <div className=" flex justify-center py-4">
@@ -50,7 +80,7 @@ export default function TanStackPage() {
           Enable Data
         </button>
       </div>
-      {isPending || isFetching && <div>Data Pending...</div>}
+      {isPending || (isFetching && <div>Data Pending...</div>)}
       {isError && <div>{(error as Error)?.message || 'An error occurred'}</div>}
       {data?.map((crypto: CryptoData) => {
         return (
