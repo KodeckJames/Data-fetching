@@ -119,6 +119,24 @@
       "title": "SEO for Single Page Applications",
       "datetime": "2026-02-10T11:30:00Z",
       "body": "SEO can be challenging for SPAs. Learn about server-side rendering, static generation, and meta tag management for better search visibility."
+    },
+    {
+      "id": "3dca",
+      "title": "New Post via Mutation",
+      "datetime": "3/16/2026, 12:14:21 AM",
+      "body": "This was added using Axios and useMutation!"
+    },
+    {
+      "id": "7ff8",
+      "title": "New Post via Mutation",
+      "datetime": "3/16/2026, 12:14:46 AM",
+      "body": "This was added using Axios and useMutation!"
+    },
+    {
+      "id": "215e",
+      "title": "New Post via Mutation",
+      "datetime": "3/16/2026, 1:08:33 AM",
+      "body": "This was added using Axios and useMutation!"
     }
   ],
   "$schema": "./node_modules/json-server/schema.json"
